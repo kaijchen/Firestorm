@@ -26,6 +26,7 @@ on:
     types: [opened, ready_for_review, synchronize]
 
 jobs:
+
   basic:
 
     runs-on: ubuntu-20.04
@@ -50,6 +51,8 @@ jobs:
       run: checks/${{ matrix.check }}.sh
 
   build:
+
+    needs: basic
 
     runs-on: ubuntu-20.04
 
