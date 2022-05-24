@@ -34,6 +34,7 @@ jobs:
       matrix:
         check:
           - checkstyle
+          - rat
           - spotbugs
       fail-fast: false
 
